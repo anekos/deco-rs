@@ -23,7 +23,7 @@ fn main() {
   tcprintln!([red bold "RED and BOLD TEXT"]);
   tcprintln!([red bold "RED and BOLD TEXT with argument `0x{:x}`"] 0xbeef);
 
-  tcprintln!([red bold "RED and BOLD" reset "NORMAL"]);
+  tcprintln!([red bold "RED and BOLD" reset " ... NORMAL"]);
 
   let mut out = "".to_owned();
   tcwriteln!(out, [italic "ITALIC TEXT"]).unwrap();
