@@ -43,14 +43,14 @@ fn main() {
 | `magenta`      | foreground magenta              |
 | `cyan`         | foreground cyan                 |
 | `white`        | foreground white                |
-| `Red`          | background red                  |
-| `Black`        | background black                |
-| `Green`        | background green                |
-| `Yellow`       | background yellow               |
-| `Blue`         | background blue                 |
-| `Magenta`      | background magenta              |
-| `Cyan`         | background cyan                 |
-| `White`        | background white                |
+| `on_red`       | background red                  |
+| `on_black`     | background black                |
+| `on_green`     | background green                |
+| `on_yellow`    | background yellow               |
+| `on_blue`      | background blue                 |
+| `on_magenta`   | background magenta              |
+| `on_cyan`      | background cyan                 |
+| `on_white`     | background white                |
 | `italic`       |                                 |
 | `bold`         |                                 |
 | `underscore`   |                                 |

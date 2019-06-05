@@ -106,6 +106,14 @@ macro_rules! dm_charnum {
     (Magenta) => { 45 };
     (Cyan) => { 46 };
     (White) => { 47 };
+    (on_black) => { 40 };
+    (on_red) => { 41 };
+    (on_green) => { 42 };
+    (on_yellow) => { 43 };
+    (on_blue) => { 44 };
+    (on_magenta) => { 45 };
+    (on_cyan) => { 46 };
+    (on_white) => { 47 };
     // Decoration
     (bold) => { 1 };
     (italic) => { 3 };
