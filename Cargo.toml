@@ -3,9 +3,28 @@ name = "deco"
 version = "0.1.0"
 authors = ["anekos <anekos@snca.net>"]
 edition = "2018"
+description = "Easy macros to make terminal output colorful and decorative"
+repository = "http://github.com/anekos/deco-rs"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+build = "build.rs"
 
 [[bin]]
 name = "colors"
 path = "src/main.rs"
 
 [dependencies]
+
+[build-dependencies]
+skeptic = "0.13"
+
+[dev-dependencies]
+skeptic = "0.13"
+
+[dev-dependencies.cargo-husky]
+version = "1"
+default-features = false
+features = ["precommit-hook", "run-cargo-test", "run-cargo-clippy"]
+
+[badges]
+travis-ci = { repository = "anekos/deco-rs" }
