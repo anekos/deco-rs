@@ -20,13 +20,13 @@ use std::fmt::Write;
 use deco::*;
 
 fn main() {
-  tcprintln!([red bold "RED and BOLD TEXT"]);
-  tcprintln!([red bold "RED and BOLD TEXT with argument `0x{:x}`"] 0xbeef);
+  dprintln!([red bold "RED and BOLD TEXT"]);
+  dprintln!([red bold "RED and BOLD TEXT with argument `0x{:x}`"] 0xbeef);
 
-  tcprintln!([red bold "RED and BOLD" reset " ... NORMAL"]);
+  dprintln!([red bold "RED and BOLD" reset " ... NORMAL"]);
 
   let mut out = "".to_owned();
-  tcwriteln!(out, [italic "ITALIC TEXT"]).unwrap();
+  dwriteln!(out, [italic "ITALIC TEXT"]).unwrap();
   println!("out is {}", out);
 }
 ```
@@ -65,8 +65,8 @@ fn main() {
 
 This crate has
 
-- tcformat
-- tcprint
-- tcprintln
-- tcwrite
-- tcwriteln
+- dformat
+- dprint
+- dprintln
+- dwrite
+- dwriteln

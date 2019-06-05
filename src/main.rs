@@ -3,7 +3,7 @@ use deco::*;
 
 
 fn main() {
-    tcprint!(
+    dprint!(
         [
         "Foreground\n"
         black "black\n"

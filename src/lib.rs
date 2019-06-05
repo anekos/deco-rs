@@ -1,51 +1,51 @@
 
 #[macro_export]
-macro_rules! tcformat {
+macro_rules! dformat {
     ($fmt:tt $($arg:expr),*) => {
        format!(
-           $crate::tcm_arguments!($fmt),
+           $crate::dm_arguments!($fmt),
            $($arg),*
        );
     };
 }
 
 #[macro_export]
-macro_rules! tcprintln {
+macro_rules! dprintln {
     ($fmt:tt $($arg:expr),*) => {
        println!(
-           $crate::tcm_arguments!($fmt),
+           $crate::dm_arguments!($fmt),
            $($arg),*
        );
     };
 }
 
 #[macro_export]
-macro_rules! tcprint {
+macro_rules! dprint {
     ($fmt:tt $($arg:expr),*) => {
        print!(
-           $crate::tcm_arguments!($fmt),
+           $crate::dm_arguments!($fmt),
            $($arg),*
        );
     };
 }
 
 #[macro_export]
-macro_rules! tcwrite {
+macro_rules! dwrite {
     ($out:expr, $fmt:tt $($arg:expr),*) => {
        write!(
            $out,
-           $crate::tcm_arguments!($fmt),
+           $crate::dm_arguments!($fmt),
            $($arg),*
        );
     };
 }
 
 #[macro_export]
-macro_rules! tcwriteln {
+macro_rules! dwriteln {
     ($out:expr, $fmt:tt $($arg:expr),*) => {
        writeln!(
            $out,
-           $crate::tcm_arguments!($fmt),
+           $crate::dm_arguments!($fmt),
            $($arg),*
        );
     };
@@ -54,22 +54,22 @@ macro_rules! tcwriteln {
 
 
 #[macro_export]
-macro_rules! tcm_arguments {
+macro_rules! dm_arguments {
     ([$($entry:tt)+]) => {
         concat!(
-            $(deco::tcm_entry!($entry)),*
+            $(deco::dm_entry!($entry)),*
         )
     };
 }
 
 #[macro_export]
-macro_rules! tcm_entry {
+macro_rules! dm_entry {
     (!) => {
-        deco::tcm_char!(reset)
+        deco::dm_char!(reset)
     };
 
     ($name:ident) => {
-        deco::tcm_char!($name)
+        deco::dm_char!($name)
     };
 
     ($name:literal) => {
@@ -78,14 +78,14 @@ macro_rules! tcm_entry {
 }
 
 #[macro_export]
-macro_rules! tcm_char {
+macro_rules! dm_char {
     ($color:ident) => {
-        concat!("\x1b[", deco::tcm_charnum!($color), "m")
+        concat!("\x1b[", deco::dm_charnum!($color), "m")
     }
 }
 
 #[macro_export]
-macro_rules! tcm_charnum {
+macro_rules! dm_charnum {
     // Reset
     (reset) => { 0 };
     // Foreground
