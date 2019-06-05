@@ -3,6 +3,7 @@ rust:
   - 1.32.0
 cache: cargo
 script:
+  - cargo clean
   - cargo build --verbose --all
   - cargo test --verbose --all
 
