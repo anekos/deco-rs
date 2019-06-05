@@ -31,6 +31,36 @@ fn main() {
 }
 ```
 
+## Color/Decoration specifiers
+
+| Specifier      | Description                     |
+|----------------|---------------------------------|
+| `red`          | foreground red                  |
+| `black`        | foreground black                |
+| `green`        | foreground green                |
+| `yellow`       | foreground yellow               |
+| `blue`         | foreground blue                 |
+| `magenta`      | foreground magenta              |
+| `cyan`         | foreground cyan                 |
+| `white`        | foreground white                |
+| `Red`          | background red                  |
+| `Black`        | background black                |
+| `Green`        | background green                |
+| `Yellow`       | background yellow               |
+| `Blue`         | background blue                 |
+| `Magenta`      | background magenta              |
+| `Cyan`         | background cyan                 |
+| `White`        | background white                |
+| `italic`       |                                 |
+| `bold`         |                                 |
+| `underscore`   |                                 |
+| `blink`        |                                 |
+| `reverse`      |                                 |
+| `conceal`      |                                 |
+| `reset` or `!` | Reset color and all decorations |
+
+
+
 # Macros
 
 This crate has
