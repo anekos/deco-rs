@@ -8,16 +8,6 @@
 Easy rust macros to make terminal output colorful and decorative
 
 
-# Supported formats
-
-- [APNG](https://en.wikipedia.org/wiki/APNG)
-- [BMP](https://en.wikipedia.org/wiki/BMP_file_format)
-- [GIF](https://en.wikipedia.org/wiki/GIF)
-- [JPEG](https://en.wikipedia.org/wiki/JPEG)
-- [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)
-- [WebP](https://en.wikipedia.org/wiki/WebP)
-
-
 # Usage
 
 ```
