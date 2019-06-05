@@ -30,3 +30,13 @@ fn main() {
   println!("out is {}", out);
 }
 ```
+
+# Macros
+
+This crate has
+
+- tcformat
+- tcprint
+- tcprintln
+- tcwrite
+- tcwriteln
