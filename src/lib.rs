@@ -30,6 +30,26 @@ macro_rules! dprint {
 }
 
 #[macro_export]
+macro_rules! deprintln {
+    ($fmt:tt $($arg:expr),*) => {
+       eprintln!(
+           $crate::dm_arguments!($fmt),
+           $($arg),*
+       );
+    };
+}
+
+#[macro_export]
+macro_rules! deprint {
+    ($fmt:tt $($arg:expr),*) => {
+       eprint!(
+           $crate::dm_arguments!($fmt),
+           $($arg),*
+       );
+    };
+}
+
+#[macro_export]
 macro_rules! dwrite {
     ($out:expr, $fmt:tt $($arg:expr),*) => {
        write!(

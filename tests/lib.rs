@@ -1,7 +1,7 @@
 
 use std::fmt::Write;
 
-use deco::{dformat, dprint, dprintln, dwrite, dwriteln};
+use deco::{dformat, dprint, dprintln, deprint, deprintln, dwrite, dwriteln};
 
 
 
@@ -48,4 +48,16 @@ fn test_print() {
 fn test_println() {
     dprintln!([red blink "red"]);
     dprintln!([red "red" bold "0x{:x}" !] 0xbeef);
+}
+
+#[test]
+fn test_eprint() {
+    deprint!([red blink "red"]);
+    deprint!([red "red" bold "0x{:x}" !] 0xbeef);
+}
+
+#[test]
+fn test_eprintln() {
+    deprintln!([red blink "red"]);
+    deprintln!([red "red" bold "0x{:x}" !] 0xbeef);
 }

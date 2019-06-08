@@ -27,6 +27,9 @@ fn main() {
 
   dprintln!([yellow on_red "yellow on red" !]);
 
+  // Std error
+  deprintln!([bold red blink "THIS IS AN ERROR MESSAGE"]);
+
   let mut out = "".to_owned();
   dwriteln!(out, [italic "ITALIC TEXT" !]).unwrap();
   println!("out is {}", out);
@@ -70,5 +73,7 @@ This crate has
 - dformat
 - dprint
 - dprintln
+- deprint
+- deprintln
 - dwrite
 - dwriteln
