@@ -1,4 +1,33 @@
 
+/// deco
+///
+/// # Example
+///
+/// ```
+/// use std::fmt::Write;
+/// use deco::*;
+///
+/// fn main() {
+///   dprintln!([red bold "RED and BOLD TEXT" !]);
+///   dprintln!([red bold "RED and BOLD TEXT with argument `0x{:x}`" !] 0xbeef);
+///
+///   dprintln!([red bold "RED and BOLD" reset " ... NORMAL"]);
+///
+///   dprintln!([yellow on_red "yellow on red" !]);
+///
+///   println!(dfmt!(red bold "red is {}"), "bold");
+///
+///   // Std error
+///   deprintln!([bold red blink "THIS IS AN ERROR MESSAGE"]);
+///
+///   let mut out = "".to_owned();
+///   dwriteln!(out, [italic "ITALIC TEXT" !]).unwrap();
+///   println!("out is {}", out);
+/// }
+/// ```
+
+
+
 #[macro_export]
 macro_rules! dfmt {
     ($($fmt:tt)+) => {
