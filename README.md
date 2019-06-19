@@ -27,6 +27,8 @@ fn main() {
 
   dprintln!([yellow on_red "yellow on red" !]);
 
+  println!(dfmt!(red bold "red is {}"), "bold");
+
   // Std error
   deprintln!([bold red blink "THIS IS AN ERROR MESSAGE"]);
 
@@ -77,3 +79,4 @@ This crate has
 - deprintln
 - dwrite
 - dwriteln
+- dfmt

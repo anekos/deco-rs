@@ -1,7 +1,7 @@
 
 use std::fmt::Write;
 
-use deco::{dformat, dprint, dprintln, deprint, deprintln, dwrite, dwriteln};
+use deco::{dfmt, dformat, dprint, dprintln, deprint, deprintln, dwrite, dwriteln};
 
 
 
@@ -60,4 +60,10 @@ fn test_eprint() {
 fn test_eprintln() {
     deprintln!([red blink "red"]);
     deprintln!([red "red" bold "0x{:x}" !] 0xbeef);
+}
+
+#[test]
+fn test_format_args() {
+    assert_eq!(dfmt!(red blink "red"), "\x1b[31m\x1b[5mred");
+    assert_eq!(dfmt!(red "red" bold "bold" !), "\x1b[31mred\x1b[1mbold\x1b[0m");
 }

@@ -1,5 +1,12 @@
 
 #[macro_export]
+macro_rules! dfmt {
+    ($($fmt:tt)+) => {
+        deco::dm_arguments!([$($fmt)*])
+    }
+}
+
+#[macro_export]
 macro_rules! dformat {
     ($fmt:tt $($arg:expr),*) => {
        format!(
